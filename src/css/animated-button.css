@@ -1,0 +1,64 @@
+/* animated-button.css */
+.animated-button {
+  --pos-x: 11.14%;
+  --pos-y: 140%;
+  --spread-x: 150%;
+  --spread-y: 180.06%;
+  --color-1: #000;
+  --color-2: #08012c;
+  --color-3: #4e1e40;
+  --color-4: #70464e;
+  --color-5: #88394c;
+  --border-angle: 20deg;
+  --border-color-1: hsla(340, 75%, 60%, 0.2);
+  --border-color-2: hsla(340, 75%, 40%, 0.75);
+  --stop-1: 37.35%;
+  --stop-2: 61.36%;
+  --stop-3: 78.42%;
+  --stop-4: 89.52%;
+  --stop-5: 100%;
+
+  position: relative;
+  background: radial-gradient(
+    var(--spread-x) var(--spread-y) at var(--pos-x) var(--pos-y),
+    var(--color-1) var(--stop-1),
+    var(--color-2) var(--stop-2),
+    var(--color-3) var(--stop-3),
+    var(--color-4) var(--stop-4),
+    var(--color-5) var(--stop-5)
+  );
+  transition: all 0.5s;
+  color: white !important; /* Override component text color */
+}
+
+.animated-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background-image: linear-gradient(var(--border-angle), var(--border-color-1), var(--border-color-2));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.animated-button:hover {
+  --pos-x: 0%;
+  --pos-y: 91.51%;
+  --spread-x: 120.24%;
+  --spread-y: 103.18%;
+  --color-1: #c96287;
+  --color-2: #c66c64;
+  --color-3: #cc7d23;
+  --color-4: #37140a;
+  --color-5: #000;
+  --border-angle: 190deg;
+  --border-color-1: hsla(340, 78%, 90%, 0.1);
+  --border-color-2: hsla(340, 75%, 90%, 0.6);
+  --stop-1: 0%;
+  --stop-2: 8.8%;
+  --stop-3: 21.44%;
+  --stop-4: 71.34%;
+  --stop-5: 85.76%;
+}
