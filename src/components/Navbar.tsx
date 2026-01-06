@@ -16,28 +16,41 @@ const navLinks = [
 /* ================= SCROLL SPY ================= */
 const useScrollSpy = () => {
   useEffect(() => {
+    let activeId = "";
+
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            history.replaceState(null, "", `#${entry.target.id}`);
-          }
-        });
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort(
+            (a, b) =>
+              b.intersectionRatio - a.intersectionRatio
+          );
+
+        if (visible.length === 0) return;
+
+        const topSection = visible[0].target.id;
+
+        if (topSection !== activeId) {
+          activeId = topSection;
+          history.replaceState(null, "", `#${topSection}`);
+        }
       },
       {
-        rootMargin: "-40% 0px -55% 0px",
-        threshold: 0,
+        rootMargin: "-45% 0px -45% 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1],
       }
     );
 
-    navLinks.forEach((link) => {
-      const section = document.getElementById(link.id);
-      if (section) observer.observe(section);
+    navLinks.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
     });
 
     return () => observer.disconnect();
   }, []);
 };
+
 
 
 const Navbar = () => {
