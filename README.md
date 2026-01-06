@@ -45,7 +45,7 @@
 | **Password Generator** | Java CLI app for secure passwords. |
 | **FDS + OOP Practicals** | SPPU Practical Projects. | :contentReference[oaicite:1]{index=1}
 
-👉 Full list in my GitHub: https://github.com/AadeshKhamkar7065
+👉 Full list in my GitHub: https://github.com/aadeshkhamkar
 
 ---
 
