@@ -58,17 +58,7 @@ Visit my **portfolio site**:
 ## 🔥 GitHub Activity
 
 ### 📈 Contribution Graph
-![Aadesh's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=AadeshKhamkar7065&theme=react-dark&hide_border=true&area=true)
-
----
-
-### ⚡ GitHub Streak
-![GitHub Streak](https://streak-stats.demolab.com?user=AadeshKhamkar7065&theme=radical&hide_border=true)
-
----
-
-### 📊 GitHub Stats
-![Aadesh's GitHub Stats](https://github-readme-stats.vercel.app/api?username=AadeshKhamkar7065&show_icons=true&theme=radical&hide_border=true)
+![Aadesh's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=aadeshkhamkar&theme=react-dark&hide_border=true&area=true)
 
 ---
 
