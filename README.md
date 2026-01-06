@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
+# 👋 Hi, I’m **Aadesh Khamkar**
+### Exploring Web Development | Java Developer | Nasscom FSP Ambassador
 
-## Project info
+[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Faadeshkhamkar.vercel.app)](https://aadeshkhamkar.vercel.app/)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aadeshkhamkar)  
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/15_aadesh_khamkar_07)  
+[![GitHub followers](https://img.shields.io/github/followers/AadeshKhamkar7065?label=Follow&style=for-the-badge)](https://github.com/AadeshKhamkar7065)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🚀 About Me
 
-There are several ways of editing your application.
+🎓 I’m a **Student at DYPIEMR Akurdi**, pursuing **Engineering in AI & Data Science**.  
+💻 Passionate about **Web Development & Java Backend**.  
+🌟 Nasscom FSP Ambassador — advocating skills & tech growth.  
+📍 Based in **Pune, Maharashtra, India**. :contentReference[oaicite:0]{index=0}
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Skills
 
-Changes made via Lovable will be committed automatically to this repo.
+### 💻 Languages
+![Java](https://img.shields.io/badge/Java-%23007396?style=flat&logo=java&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-**Use your preferred IDE**
+### 🌐 Frontend
+![HTML5](https://img.shields.io/badge/HTML5-%23E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-%231572B6?style=flat&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/React-%2320232a?style=flat&logo=react&logoColor=#61DAFB)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🗄️ Backend / Tools
+![Node.js](https://img.shields.io/badge/Node.js-%23339933?style=flat&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-%23404d59?style=flat&logo=express&logoColor=white)
+![Git](https://img.shields.io/badge/Git-%23F05032?style=flat&logo=git&logoColor=white)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 💼 Projects
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+| Project | Description |
+|---------|-------------|
+| **Amazon Clone** | HTML/CSS Project replicating Amazon UI layout. |
+| **E-Commerce Website** | Frontend + basic cart features. |
+| **Tablet Selling Website** | Responsive shop UI. |
+| **Password Generator** | Java CLI app for secure passwords. |
+| **FDS + OOP Practicals** | SPPU Practical Projects. | :contentReference[oaicite:1]{index=1}
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+👉 Full list in my GitHub: https://github.com/AadeshKhamkar7065
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🌐 Portfolio
 
-**Edit a file directly in GitHub**
+Visit my **portfolio site**:  
+🔥 https://aadeshkhamkar.vercel.app/
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📊 GitHub Stats
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+![Aadesh’s GitHub Stats](https://github-readme-stats.vercel.app/api?username=AadeshKhamkar7065&show_icons=true&theme=radical)
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 📫 Contact
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+📧 Email: *your.email@example.com*  
+📍 Pune, Maharashtra, India  
+LinkedIn: https://www.linkedin.com/in/aadeshkhamkar
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## ❤️ ❤️ Thank you for visiting!
