@@ -1,93 +1,142 @@
 "use client";
-import { useState } from "react";
 import "../css/contact.css";
-import { ArrowDownCircle } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Github,
+  Instagram,
+  Code2,
+  MailIcon,
+  Send,
+} from "lucide-react";
+import { Button } from "./ui/button";
 
 const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden font-display animate-blur-reveal bg-black py-24 lg:py-32"
+      className="relative overflow-hidden bg-black py-20 lg:py-28 font-display"
     >
-      <div className="container mx-auto max-w-4xl px-6 lg:px-12">
-        <div className="text-center mb-16">
-          <span className="get-in-touch-badge border-white animate-pulse mb-6 inline-flex px-3 py-1 text-sm">
+      <div className="mx-auto max-w-5xl px-5 sm:px-8 lg:px-14">
+        {/* HEADER */}
+        <div className="mb-16 text-center">
+          <span className="mb-6 inline-flex rounded-full border animate-pulse border-white/70 px-4 py-1 text-sm text-sky-400 animate-pulse">
             Get in Touch
           </span>
 
-          <h2 className="mb-6 font-display text-3xl md:text-4xl lg:text-5xl">
+          <h2 className="mb-5 text-3xl sm:text-4xl lg:text-5xl text-white">
             Ideas & Insights
           </h2>
 
-          <p className="mx-auto max-w-xl text-white/70 font-display">
+          <p className="mx-auto max-w-xl text-sm sm:text-base text-white/70">
             Let’s collaborate to turn your ideas into impactful, real-world
             solutions.
           </p>
         </div>
 
-        {/* CONTACT TABLE */}
-        <div className="divide-y divide-white/10">
-
+        {/* CONTACT CARD */}
+        <div className="rounded-2xl border font-serif border-white/10 bg-white/[0.02] backdrop-blur-sm">
           {/* EMAIL */}
-          <div className="flex items-center justify-between py-6">
-            <span className="text-sm text-white">Mail</span>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 px-6 lg:px-10 py-6 border-b border-white/10">
+            <div className="flex items-center gap-3 text-white">
+              <Mail size={16} />
+              <span className="text-sm">Mail</span>
+            </div>
             <a
               href="mailto:aadeshbkhamkar@gmail.com"
-              className="text-sm font-medium text-sky-200 hover:underline"
+              className="text-sm text-sky-300 hover:underline break-all"
             >
               aadeshbkhamkar@gmail.com
             </a>
           </div>
 
-          {/* SOCIALS */}
-          <div className="flex items-center justify-between py-6">
-            <span className="text-sm text-white">Socials</span>
-            <div className="flex gap-4 text-sm">
-              <a
-                href="https://www.linkedin.com/in/aadeshkhamkar/"
-                className="hover:underline text-sky-200"
-              >
-                LinkedIn
-              </a>
-              <span className="text-sky-200">•</span>
-              <a
-                href="https://github.com/aadeshkhamkar"
-                className="hover:underline text-sky-200"
-              >
-                GitHub
-              </a>
-              <span className="text-sky-200">•</span>
-              <a
-                href="https://leetcode.com/u/Aadeshkhamkar/"
-                className="hover:underline text-sky-200"
-              >
-                LeetCode
-              </a>
+          {/* SOCIAL ICONS */}
+          {/* SOCIAL ICONS */}
+          <div className="px-6 lg:px-10 py-8 border-b border-white/10">
+            {/* MOBILE */}
+            <div className="flex flex-col gap-4 lg:hidden">
+              <div className="flex items-center gap-3 text-white">
+                <Send size={16} />
+                <span className="text-sm">Socials</span>
+              </div>
+
+              <div className="flex gap-5">
+                {[Linkedin, Github, Code2, Instagram].map((Icon, i) => (
+                  <Button key={i} variant="aadesh">
+                    <Icon className="h-5 w-5" />
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            {/* LAPTOP / TAB / PC */}
+            <div className="hidden lg:grid grid-cols-[auto_1fr] items-center">
+              {/* LEFT LABEL */}
+              <div className="flex items-center gap-3 text-white">
+                <Send size={16} />
+                <span className="text-sm">Socials</span>
+              </div>
+
+              {/* RIGHT ICONS */}
+              <div className="flex justify-end gap-6">
+                {[
+                  {
+                    href: "https://www.linkedin.com/in/aadeshkhamkar/",
+                    Icon: Linkedin,
+                  },
+                  {
+                    href: "https://github.com/aadeshkhamkar",
+                    Icon: Github,
+                  },
+                  {
+                    href: "https://leetcode.com/u/Aadeshkhamkar/",
+                    Icon: Code2,
+                  },
+                  {
+                    href: "https://www.instagram.com/aadeshbkhamkar/",
+                    Icon: Instagram,
+                  },
+                ].map(({ href, Icon }, i) => (
+                  <a key={i} href={href} aria-label="social">
+                    <Button variant="aadesh">
+                      <Icon />
+                    </Button>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
+
           {/* PHONE */}
-          <div className="flex items-center justify-between py-6">
-            <span className="text-sm text-white">Phone number</span>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 px-6 lg:px-10 py-6 border-b border-white/10">
+            <div className="flex items-center gap-3 text-white">
+              <Phone size={16} />
+              <span className="text-sm">Phone</span>
+            </div>
             <a
               href="https://wa.link/lz7f8u"
-              className="font-display text-sky-200 hover:underline"
+              className="text-sm font-body text-sky-300 hover:underline"
             >
-              +91 9373918571
+              +91 93739 18571
             </a>
           </div>
 
           {/* LOCATION */}
-          <div className="flex items-center justify-between py-6">
-            <span className="text-display text-white">Location</span>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 px-6 lg:px-10 py-6">
+            <div className="flex items-center gap-3 text-white">
+              <MapPin size={16} />
+              <span className="text-sm">Location</span>
+            </div>
             <a
               href="https://www.google.com/maps/search/?api=1&query=sector29+kundanpark+ravet"
-              className="text-sm text-sky-200 hover:underline"
+              className="text-sm text-sky-300 hover:underline"
             >
               Pune, Maharashtra
             </a>
           </div>
-
         </div>
       </div>
     </section>
