@@ -1,18 +1,48 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X, ArrowRightCircle } from "lucide-react";
 import logo from "../assets/Home-Logo.png";
 import resume from "../assets/Resume Of Aadesh Khamkar.pdf";
 import { Button } from "@/components/ui/button";
 
+/* ================= NAV LINKS ================= */
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "#home", id: "home" },
+  { label: "About", href: "#about", id: "about" },
+  { label: "Projects", href: "#projects", id: "projects" },
+  { label: "Skills", href: "#skills", id: "skills" },
+  { label: "Contact", href: "#contact", id: "contact" },
 ];
 
+/* ================= SCROLL SPY ================= */
+const useScrollSpy = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            history.replaceState(null, "", `#${entry.target.id}`);
+          }
+        });
+      },
+      {
+        rootMargin: "-40% 0px -55% 0px",
+        threshold: 0,
+      }
+    );
+
+    navLinks.forEach((link) => {
+      const section = document.getElementById(link.id);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+};
+
+
 const Navbar = () => {
+  useScrollSpy();
+
   const [isMounted, setIsMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,12 +57,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-6  md:top-4 left-0 right-0 z-50">
+    <nav className="fixed top-6 md:top-4 left-0 right-0 z-50">
       <div className="relative mx-auto max-w-6xl px-4 md:px-6">
 
         {/* ================= CENTER GLASS BAR ================= */}
-
         <div className="mx-auto flex animate-blur-nav h-14 md:h-16 items-center rounded-full px-2 md:px-6 bg-white/5 backdrop-blur-xl">
+
           {/* LOGO */}
           <a href="#home" className="flex items-center">
             <div className="flex h-10 w-10 md:h-11 md:w-11 items-center justify-center rounded-full">
@@ -79,7 +109,8 @@ const Navbar = () => {
         {/* ================= MOBILE MENU ================= */}
         {isMounted && (
           <div className="md:hidden fixed inset-0 z-50">
-            {/* BACKDROP — SAME GLASS AS NAVBAR */}
+
+            {/* BACKDROP */}
             <div
               onClick={closeMenu}
               className={`absolute inset-0 bg-white/5 backdrop-blur-2xl
@@ -91,11 +122,9 @@ const Navbar = () => {
             <div
               className={`relative z-10 flex h-full flex-col items-center justify-center text-center
               transform transition-all duration-500 ease-in-out
-              ${isOpen
-                  ? "translate-y-0 opacity-100"
-                  : "-translate-y-24 opacity-0"
-                }`}
+              ${isOpen ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"}`}
             >
+
               {/* CLOSE */}
               <button
                 onClick={closeMenu}
@@ -105,16 +134,8 @@ const Navbar = () => {
               </button>
 
               {/* LOGO */}
-              <div
-                className="mb-12 flex h-16 w-16 items-center justify-center rounded-full bg-black/25 backdrop-blur-xl
-                transition-all duration-500"
-                style={{ transitionDelay: isOpen ? "100ms" : "0ms" }}
-              >
-                <img
-                  src={logo}
-                  alt="Logo"
-                  className="object-cover scale-[1.8]"
-                />
+              <div className="mb-12 flex h-16 w-16 items-center justify-center rounded-full bg-black/25 backdrop-blur-xl">
+                <img src={logo} alt="Logo" className="object-cover scale-[1.8]" />
               </div>
 
               {/* LINKS */}
@@ -125,10 +146,7 @@ const Navbar = () => {
                     href={link.href}
                     onClick={closeMenu}
                     className={`transition-all duration-500
-                    ${isOpen
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 -translate-y-6"
-                      }`}
+                    ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"}`}
                     style={{
                       transitionDelay: isOpen
                         ? `${200 + index * 120}ms`
@@ -143,10 +161,7 @@ const Navbar = () => {
               {/* RESUME */}
               <div
                 className={`mt-16 transition-all duration-500
-                ${isOpen
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 -translate-y-6"
-                  }`}
+                ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"}`}
                 style={{
                   transitionDelay: isOpen
                     ? `${200 + navLinks.length * 120}ms`
@@ -160,6 +175,7 @@ const Navbar = () => {
                   </Button>
                 </a>
               </div>
+
             </div>
           </div>
         )}

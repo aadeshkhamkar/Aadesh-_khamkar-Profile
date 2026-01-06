@@ -31,10 +31,10 @@ const HeroSection = () => {
         {/* MAIN TEXT */}
         <h1 className="animate-blur-reveal mb-4 font-display text-5xl leading-tight md:text-xl lg:text-5xl">
           <span className="animate-pulse">Building</span>
-          <span className="text-slate-400"> experiences</span>
+          <span className="text-slate-400 "> experiences</span>
           <br />
-          <span className="animate-pulse">that</span>
-          <span className="text-slate-400 "> matter..!</span>
+          <span>that</span>
+          <span className="text-slate-400 animate-pulse"> matter..!</span>
         </h1>
 
         <br />
