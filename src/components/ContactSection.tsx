@@ -8,21 +8,43 @@ import {
   Github,
   Instagram,
   Code2,
-  MailIcon,
   Send,
 } from "lucide-react";
 import { Button } from "./ui/button";
+
+const socials = [
+  {
+    href: "https://www.linkedin.com/in/aadeshkhamkar/",
+    Icon: Linkedin,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://github.com/aadeshkhamkar",
+    Icon: Github,
+    label: "GitHub",
+  },
+  {
+    href: "https://leetcode.com/u/Aadeshkhamkar/",
+    Icon: Code2,
+    label: "LeetCode",
+  },
+  {
+    href: "https://www.instagram.com/aadeshbkhamkar/",
+    Icon: Instagram,
+    label: "Instagram",
+  },
+];
 
 const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-black py-20 lg:py-28 font-display"
+      className="relative animate-blur-reveal overflow-hidden bg-black py-20 lg:py-28 font-display"
     >
       <div className="mx-auto max-w-5xl px-5 sm:px-8 lg:px-14">
         {/* HEADER */}
         <div className="mb-16 text-center">
-          <span className="mb-6 inline-flex rounded-full border animate-pulse border-white/70 px-4 py-1 text-sm text-sky-400 animate-pulse">
+          <span className="mb-6 inline-flex rounded-full border border-white/70 px-4 py-1 text-sm text-sky-400 animate-pulse">
             Get in Touch
           </span>
 
@@ -37,7 +59,7 @@ const ContactSection = () => {
         </div>
 
         {/* CONTACT CARD */}
-        <div className="rounded-2xl border font-serif border-white/10 bg-white/[0.02] backdrop-blur-sm">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
           {/* EMAIL */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 px-6 lg:px-10 py-6 border-b border-white/10">
             <div className="flex items-center gap-3 text-white">
@@ -53,7 +75,6 @@ const ContactSection = () => {
           </div>
 
           {/* SOCIAL ICONS */}
-          {/* SOCIAL ICONS */}
           <div className="px-6 lg:px-10 py-8 border-b border-white/10">
             {/* MOBILE */}
             <div className="flex flex-col gap-4 lg:hidden">
@@ -63,9 +84,16 @@ const ContactSection = () => {
               </div>
 
               <div className="flex gap-5">
-                {[Linkedin, Github, Code2, Instagram].map((Icon, i) => (
-                  <Button key={i} variant="aadesh">
-                    <Icon className="h-5 w-5" />
+                {socials.map(({ href, Icon, label }) => (
+                  <Button key={label} variant="aadesh" asChild>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </a>
                   </Button>
                 ))}
               </div>
@@ -81,34 +109,21 @@ const ContactSection = () => {
 
               {/* RIGHT ICONS */}
               <div className="flex justify-end gap-6">
-                {[
-                  {
-                    href: "https://www.linkedin.com/in/aadeshkhamkar/",
-                    Icon: Linkedin,
-                  },
-                  {
-                    href: "https://github.com/aadeshkhamkar",
-                    Icon: Github,
-                  },
-                  {
-                    href: "https://leetcode.com/u/Aadeshkhamkar/",
-                    Icon: Code2,
-                  },
-                  {
-                    href: "https://www.instagram.com/aadeshbkhamkar/",
-                    Icon: Instagram,
-                  },
-                ].map(({ href, Icon }, i) => (
-                  <a key={i} href={href} aria-label="social">
-                    <Button variant="aadesh">
-                      <Icon />
-                    </Button>
-                  </a>
+                {socials.map(({ href, Icon, label }) => (
+                  <Button key={label} variant="aadesh" asChild>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                    >
+                      <Icon className="h-5 w-5 lg:h-6 lg:w-6" />
+                    </a>
+                  </Button>
                 ))}
               </div>
             </div>
           </div>
-
 
           {/* PHONE */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 px-6 lg:px-10 py-6 border-b border-white/10">
@@ -118,9 +133,9 @@ const ContactSection = () => {
             </div>
             <a
               href="https://wa.link/lz7f8u"
-              className="text-sm font-body text-sky-300 hover:underline"
+              className="text-sm font-bold text-sky-300 hover:underline"
             >
-              +91 93739 18571
+              +91 93739-18571
             </a>
           </div>
 
