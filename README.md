@@ -64,7 +64,7 @@ Visit my **portfolio site**:
 
 ## 📫 Contact
 
-📧 Email: *your.email@example.com*  
+📧 Email: *aadeshbkhamkar@gmail.com*  
 📍 Pune, Maharashtra, India  
 LinkedIn: https://www.linkedin.com/in/aadeshkhamkar
 
