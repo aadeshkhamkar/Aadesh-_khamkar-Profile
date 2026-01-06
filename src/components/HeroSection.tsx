@@ -30,9 +30,11 @@ const HeroSection = () => {
 
         {/* MAIN TEXT */}
         <h1 className="animate-blur-reveal mb-4 font-display text-5xl leading-tight md:text-xl lg:text-5xl">
-          Building experiences
+          <span className="animate-pulse">Building</span>
+          <span className="text-slate-400"> experiences</span>
           <br />
-          <span className="text-slate-400">that matter..!</span>
+          <span className="animate-pulse">that</span>
+          <span className="text-slate-400 "> matter..!</span>
         </h1>
 
         <br />
@@ -41,7 +43,7 @@ const HeroSection = () => {
         <div className="relative animate-blur-reveal h-7 overflow-hidden">
           <p
             key={index}
-            className="animate-slide-up animate-color-sweep font-serif text-sm tracking-wide"
+            className="animate-slide-up animate-color-sweep font-mono text-sm tracking-wide"
           >
             {roles[index]}
           </p>

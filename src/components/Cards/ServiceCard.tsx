@@ -3,7 +3,7 @@ const ServiceCard = ({ skills, index }) => {
 
   return (
     <div
-      className="hover-lift group relative rounded-2xl border border-border  bg-black p-8 transition-all duration-500 hover:border-white/50"
+      className="hover-lift group animate-blur-reveal relative rounded-2xl border border-border  bg-black p-8 transition-all duration-500 hover:border-white/50"
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Glow Effect */}

@@ -31,8 +31,8 @@ const Navbar = () => {
       <div className="relative mx-auto max-w-6xl px-4 md:px-6">
 
         {/* ================= CENTER GLASS BAR ================= */}
-        
-        <div className="mx-auto flex animate-slide-right h-14 md:h-16 items-center rounded-full px-2 md:px-6 bg-white/5 backdrop-blur-xl">
+
+        <div className="mx-auto flex animate-blur-nav h-14 md:h-16 items-center rounded-full px-2 md:px-6 bg-white/5 backdrop-blur-xl">
           {/* LOGO */}
           <a href="#home" className="flex items-center">
             <div className="flex h-10 w-10 md:h-11 md:w-11 items-center justify-center rounded-full">
@@ -91,11 +91,10 @@ const Navbar = () => {
             <div
               className={`relative z-10 flex h-full flex-col items-center justify-center text-center
               transform transition-all duration-500 ease-in-out
-              ${
-                isOpen
+              ${isOpen
                   ? "translate-y-0 opacity-100"
                   : "-translate-y-24 opacity-0"
-              }`}
+                }`}
             >
               {/* CLOSE */}
               <button
@@ -126,11 +125,10 @@ const Navbar = () => {
                     href={link.href}
                     onClick={closeMenu}
                     className={`transition-all duration-500
-                    ${
-                      isOpen
+                    ${isOpen
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 -translate-y-6"
-                    }`}
+                      }`}
                     style={{
                       transitionDelay: isOpen
                         ? `${200 + index * 120}ms`
@@ -145,11 +143,10 @@ const Navbar = () => {
               {/* RESUME */}
               <div
                 className={`mt-16 transition-all duration-500
-                ${
-                  isOpen
+                ${isOpen
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 -translate-y-6"
-                }`}
+                  }`}
                 style={{
                   transitionDelay: isOpen
                     ? `${200 + navLinks.length * 120}ms`

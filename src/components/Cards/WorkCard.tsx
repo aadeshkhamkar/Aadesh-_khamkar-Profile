@@ -23,7 +23,8 @@ const getProjectDetails = (projectId) => {
   const projectData = {
     1: {
       description:
-        "A smart personal finance web app that helps users track income, expenses, savings, budget alerts, and AI-based financial predictions.",
+        "A mental health and wellness web app featuring surveys, age-based care, home health monitoring, and Ayurvedic insights.",
+
       github: "https://www.linkedin.com/in/aadeshkhamkar/details/projects/",
     },
     2: {
@@ -33,22 +34,26 @@ const getProjectDetails = (projectId) => {
     },
     3: {
       description:
-        "An AI-powered pet care web app offering vet booking, pet services, health resources, and personalized pet health assistance.",
+        "An inclusive EdTech web application designed for deaf and blind students with audio learning, sign recognition, and adaptive tools.",
+
       github: "https://www.linkedin.com/in/aadeshkhamkar/details/projects/",
     },
     4: {
       description:
-        "An inclusive EdTech web application designed for deaf and blind students with audio learning, sign recognition, and adaptive tools.",
+        "A smart personal finance web app that helps users track income, expenses, savings, budget alerts, and AI-based financial predictions.",
+
       github: "https://www.linkedin.com/in/aadeshkhamkar/details/projects/",
     },
     5: {
       description:
-        "A mental health and wellness web app featuring surveys, age-based care, home health monitoring, and Ayurvedic insights.",
+        "A responsive university website with modern UI, AI chatbot integration, and scalable design for future educational platforms.",
+
       github: "https://www.linkedin.com/in/aadeshkhamkar/details/projects/",
     },
     6: {
       description:
-        "A responsive university website with modern UI, AI chatbot integration, and scalable design for future educational platforms.",
+        "An AI-powered pet care web app offering vet booking, pet services, health resources, and personalized pet health assistance.",
+
       github: "https://www.linkedin.com/in/aadeshkhamkar/details/projects/",
     },
   };
@@ -72,15 +77,14 @@ const WorkCard = ({ project, index }) => {
   return (
     <div
       className={`group relative bg-black overflow-hidden rounded-2xl transition-all duration-500
-      ${
-        open
+      ${open
           ? "bg-white/10 backdrop-blur-xl border border-white/30"
           : "bg-black"
-      }`}
+        }`}
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* IMAGE */}
-      <div className="aspect-[4/3] overflow-hidden">
+      <div className="aspect-[4/3] scale-120 overflow-hidden">
         <img
           src={project.image}
           alt={project.title}

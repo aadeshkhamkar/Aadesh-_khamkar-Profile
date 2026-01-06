@@ -33,7 +33,7 @@ const projects = [
   {
     id: 4,
     title: "FinTrack",
-    category: "Web Design",
+    category: "Java Full-Stack",
     image: pr1,
     year: "2025-25",
   },
@@ -47,7 +47,7 @@ const projects = [
   {
     id: 6,
     title: "PetXpert",
-    category: "Web Design",
+    category: "Web App",
     image: pr3,
     year: "2025-26",
   },
@@ -72,17 +72,17 @@ const WorksSection = () => {
   return (
     <section
       id="projects"
-      className="relative bg-black py-24 lg:py-32 text-white"
+      className="relative animate-blur-reveal bg-black py-24 lg:py-32 text-white"
     >
       <div className="container relative z-10 mx-auto px-6 lg:px-12">
         {/* HEADER */}
         <div className="mb-16 text-center">
-          <p className="mb-4 get-in-touch-badge font-body text-sm uppercase tracking-[0.3em] text-sky-400">
-            Projects
+          <p className="get-in-touch-badge border-white/50 animate-pulse mb-6 inline-flex items-center px-3 py-1 text-sm leading-none">
+            What I Build
           </p>
 
           <h2 className="mb-10 font-display animate-blur-reveal text-3xl font-medium leading-tight md:text-4xl lg:text-5xl text-white">
-            Case Studies
+            Lets Explore
           </h2>
 
           <p className="mx-auto animate-blur-reveal mb-8 max-w-xl font-serif text-lg text-white/70">
@@ -98,9 +98,14 @@ const WorksSection = () => {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               variant="aadesh"
+              className={`transition-all ${activeCategory === cat
+                  ? "bg-white text-black"
+                  : "bg-transparent text-white/70 hover:text-black"
+                }`}
             >
               {cat}
             </Button>
+
           ))}
         </div>
 

@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
 
           {/* CENTER TEXT – FORCE TRUE CENTER */}
-          <p className="text-center animate-blur-reveal text-xs leading-relaxed text-white font-serif">
+          <p className="text-center animate-blur-reveal text-xs leading-relaxed text-white font-body">
             © Design and developed by Aadesh Khamkar {new Date().getFullYear()}
           </p>
 

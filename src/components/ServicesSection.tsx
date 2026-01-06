@@ -65,8 +65,8 @@ const ServicesSection = () => {
       <div className="container relative z-10 mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="mx-auto mb-20 max-w-2xl text-center">
-          <p className="mb-4 get-in-touch-badge font-body text-sm uppercase tracking-[0.3em] text-sky-500">
-            Core Skills
+          <p className="get-in-touch-badge border-white animate-pulse mb-6 inline-flex items-center px-3 py-1 text-sm leading-none">
+            What I Do
           </p>
           <h2 className="mb-10 animate-blur-reveal font-display text-3xl font-medium leading-tight md:text-4xl lg:text-5xl">
             Areas of expertise
