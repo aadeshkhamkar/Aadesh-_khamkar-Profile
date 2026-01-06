@@ -55,10 +55,31 @@ Visit my **portfolio site**:
 🔥 https://aadeshkhamkar.vercel.app/
 
 ---
+## 🔥 GitHub Activity
 
-## 📊 GitHub Stats
+### 📈 Contribution Graph
+![Aadesh's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=AadeshKhamkar7065&theme=react-dark&hide_border=true&area=true)
 
-![Aadesh’s GitHub Stats](https://github-readme-stats.vercel.app/api?username=AadeshKhamkar7065&show_icons=true&theme=radical)
+---
+
+### ⚡ GitHub Streak
+![GitHub Streak](https://streak-stats.demolab.com?user=AadeshKhamkar7065&theme=radical&hide_border=true)
+
+---
+
+### 📊 GitHub Stats
+![Aadesh's GitHub Stats](https://github-readme-stats.vercel.app/api?username=AadeshKhamkar7065&show_icons=true&theme=radical&hide_border=true)
+
+---
+
+### 🧠 Top Languages
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AadeshKhamkar7065&layout=compact&theme=radical&hide_border=true)
+
+---
+
+### 👀 Profile Views
+![Profile Views](https://komarev.com/ghpvc/?username=AadeshKhamkar7065&label=Profile%20Views&color=blueviolet&style=flat)
+
 
 ---
 
