@@ -17,11 +17,11 @@ const Footer = () => {
           {/* LEFT LOGO */}
           <div className="flex justify-center lg:justify-start">
             <a href="#home">
-              <div className="flex h-10 w-10 md:h-11 md:w-11 items-center justify-center rounded-full backdrop-blur-md border">
+              <div className="flex h-10 w-10 md:h-11 md:w-11 items-center justify-center rounded-full">
                 <img
                   src={logo}
                   alt="Logo"
-                  className="object-cover scale-[1.8]"
+                  className="object-cover scale-[1.4]"
                 />
               </div>
             </a>

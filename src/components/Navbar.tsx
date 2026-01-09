@@ -79,7 +79,7 @@ const Navbar = () => {
           {/* LOGO */}
           <a href="#home" className="flex items-center">
             <div className="flex h-10 w-10 md:h-11 md:w-11 items-center justify-center rounded-full">
-              <img src={logo} alt="Logo" className="object-cover scale-[1.8]" />
+              <img src={logo} alt="Logo" className="object-cover scale-[1.2]" />
             </div>
           </a>
 
@@ -147,8 +147,8 @@ const Navbar = () => {
               </button>
 
               {/* LOGO */}
-              <div className="mb-12 flex h-16 w-16 items-center justify-center rounded-full bg-black/25 backdrop-blur-xl">
-                <img src={logo} alt="Logo" className="object-cover scale-[1.8]" />
+              <div className="mb-12 flex h-16 w-16 items-center justify-center rounded-full  ">
+                <img src={logo} alt="Logo" className="object-cover scale-[1.3]" />
               </div>
 
               {/* LINKS */}
